@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Magic Removal Specialist - Master Shivaram Ji</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom styles for background and effects */
+        .service-hero {
+            background: linear-gradient(135deg, #1f2937 0%, #dc2626 100%); /* Dark Red/Purple Blend */
+            position: relative;
+            overflow: hidden;
+        }
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Subtle star pattern background */
+            background-image: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="star-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle fill="rgba(255, 255, 255, 0.1)" cx="20" cy="20" r="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(%23star-pattern)"/></svg>');
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        /* 1. Header CTA Pulse Animation */
+        @keyframes pulse-call {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        .header-cta {
+            animation: pulse-call 2s infinite;
+        }
+
+        /* 2. Hero CTA subtle shake/glow */
+        @keyframes subtle-glow {
+            0%, 100% { transform: scale(1); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); }
+            50% { transform: scale(1.01); box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.5), 0 4px 6px -4px rgba(251, 191, 36, 0.5); }
+        }
+        .hero-cta-anim {
+            animation: subtle-glow 3s ease-in-out infinite;
+        }
+
+        /* 3. Scroll Reveal Transition Classes */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans overflow-x-hidden">
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-xl border-b border-red-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-extrabold flex items-center text-amber-400">
+                <i data-lucide="sparkles" class="mr-2 w-7 h-7"></i>
+                MASTER SHIVARAM JI
+            </a>
+            <!-- Added header-cta class for pulse animation -->
+            <a href="tel:+19293120932" class="px-3 py-1.5 rounded-full bg-red-600 text-white font-medium hover:bg-red-500 transition shadow-md header-cta">Call for Guidance</a>
+        </div>
+    </header>
+
+    <main id="app-root">
+        
+        <!-- 1. HERO SECTION -->
+        <section class="service-hero py-24 md:py-32">
+            <div class="relative z-10 max-w-4xl mx-auto text-center px-4">
+                <h1 class="text-5xl md:text-7xl font-extrabold text-red-400 mb-4 drop-shadow-lg">
+                    Black Magic Removal Specialist
+                </h1>
+                <p class="text-xl text-gray-200 font-light mb-10">
+                    Powerful, guaranteed rituals to detect, remove, and permanently protect against black magic, curses, and evil eye.
+                </p>
+                <!-- Added hero-cta-anim class for subtle shake/glow -->
+                <a href="tel:+19293120932" class="inline-flex items-center justify-center px-10 py-4 text-xl font-bold rounded-full bg-amber-400 text-gray-900 transition duration-300 shadow-2xl hover:bg-amber-300 transform hover:scale-105 hero-cta-anim">
+                    Consult for Protection Today
+                    <i data-lucide="minus-circle" class="ml-3 w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. EXPERTISE / AUTHORITY SECTION -->
+        <section class="py-16 bg-gray-900 text-white border-b-4 border-red-600 scroll-reveal">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-4xl font-extrabold mb-4 text-amber-400">Generations of Spiritual Mastery</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-300 leading-relaxed">
+                    Master Shivaram Ji is a globally renowned spiritual healer and astrologer with decades of experience in the ancient art of Tantra. Trained in powerful hereditary rites, he specializes exclusively in the removal of the most stubborn and complex forms of black magic, curses, and negative energy, ensuring your life path is clear and eternally protected.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. MAIN CONTENT (SIGNS & REMEDIES + SIDEBAR CTA) -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-16">
+                
+                <!-- COLUMN 1 (Main Content: Signs & Remedies) -->
+                <div class="lg:col-span-2 space-y-12">
+                    
+                    <!-- 3.1 SIGNS OF CURSES - Added scroll-reveal class -->
+                    <div class="p-6 md:p-8 rounded-2xl border-4 border-red-100 bg-red-50 shadow-lg scroll-reveal">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-3 border-red-200">
+                            Detecting the Darkness: Signs of Black Magic
+                        </h2>
+                        <p class="text-lg text-gray-700 mb-8">
+                            **Black magic**, driven by jealousy or malice, aims to sabotage your life, career, or relationships. These effects manifest as sudden, illogical, and persistent issues. Master Shivaram Ji uses **spiritual readings** and **occult science** to accurately diagnose if a malicious spell or curse is affecting you.
+                        </p>
+
+                        <h3 class="text-2xl font-semibold text-red-600 mb-4 flex items-center"><i data-lucide="bell" class="w-6 h-6 mr-2"></i> Common Symptoms He Identifies:</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                                <i data-lucide="trending-down" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i> 
+                                <div>
+                                    <span class="font-bold">Financial Ruin:</span> Sudden, unexplained financial ruin, business collapse, or loss of income despite effort.
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                                <i data-lucide="heart-crack" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i> 
+                                <div>
+                                    <span class="font-bold">Relationship Destruction:</span> Uncontrollable fights, immediate destruction of happy marriage/love life, or sudden hatred from loved ones.
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                                <i data-lucide="pill" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i> 
+                                <div>
+                                    <span class="font-bold">Persistent Illness:</span> Chronic illness that doctors cannot diagnose, constant fatigue, or strange body sensations.
+                                </div>
+                            </li>
+                            <li class="flex items-start bg-white p-3 rounded-lg shadow-sm">
+                                <i data-lucide="eye-off" class="w-6 h-6 text-red-500 mr-3 mt-1 flex-shrink-0"></i> 
+                                <div>
+                                    <span class="font-bold">Psychological Distress:</span> Feeling constantly watched, extreme nightmares, severe depression, or a heavy, oppressive feeling at home.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3.2 REMEDIES - Added scroll-reveal class and delayed animation -->
+                    <div class="p-6 md:p-8 rounded-2xl border-4 border-gray-200 bg-white shadow-lg scroll-reveal" style="transition-delay: 0.2s;">
+                         <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b pb-3 border-gray-200">
+                            Master Shivaram Ji's Powerful Remedies:
+                        </h2>
+                        <div class="space-y-6 text-gray-700">
+                            <div class="flex items-start bg-red-50 p-5 rounded-xl shadow-md border-l-4 border-red-600">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-red-600 mt-0.5 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xl text-red-800 mb-1">Customized Counter-Spell Rituals (Tantra)</p>
+                                    <p>Ancient and highly protected Tantric rites used to fully **neutralize and reverse** the specific black magic directed at you, sending the negative energy away permanently.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-red-50 p-5 rounded-xl shadow-md border-l-4 border-red-600">
+                                <i data-lucide="aura" class="w-8 h-8 text-red-600 mt-0.5 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xl text-red-800 mb-1">Spiritual Cleansing and Aura Protection</p>
+                                    <p>Deep cleansing of your aura and environment to eliminate residual negative vibrations, followed by the installation of a **powerful, impenetrable spiritual shield** to prevent future attacks.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start bg-red-50 p-5 rounded-xl shadow-md border-l-4 border-red-600">
+                                <i data-lucide="key" class="w-8 h-8 text-red-600 mt-0.5 mr-4 flex-shrink-0"></i>
+                                <div>
+                                    <p class="font-bold text-xl text-red-800 mb-1">Home/Business Security Mantras</p>
+                                    <p>Providing blessed Yantras and energy points to place in your property to prevent any future attacks of black magic or evil eye from entering and to restore prosperity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- COLUMN 2 (Sidebar/CTA) -->
+                <div class="space-y-12">
+                    <!-- Sidebar CTA - Added scroll-reveal class and delay -->
+                    <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl border-4 border-red-600 scroll-reveal" style="transition-delay: 0.4s;">
+                        <h4 class="text-2xl font-bold text-amber-400 mb-4 flex items-center justify-center border-b border-red-700 pb-3"><i data-lucide="phone-call" class="w-6 h-6 mr-3"></i> Urgent Help Needed</h4>
+                        <p class="mb-6 text-gray-300 text-center">If you feel immediate danger, distress, or sense a malicious presence, call now. Confidential and powerful protection services are available 24/7.</p>
+                        <!-- Added pulse animation to the prominent CTA button -->
+                        <a href="tel:+19293120932" class="block text-center py-4 bg-red-600 text-white font-extrabold text-lg rounded-xl hover:bg-red-700 transition transform hover:scale-[1.02] shadow-xl header-cta">
+                            CALL NOW: +1 (929) 312-0932
+                        </a>
+                    </div>
+                    
+                    <!-- Sidebar Image - Added scroll-reveal class and delay -->
+                    <div class="rounded-2xl overflow-hidden shadow-2xl border-4 border-red-400 scroll-reveal" style="transition-delay: 0.6s;">
+                        <img 
+                            src="black.jpg" 
+                            alt="Spiritual Protection and Guidance from Master Shivaram Ji" 
+                            class="w-full h-auto object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/991b1b/ffffff?text=IMAGE+ERROR'"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-4">
+                <a href="tel:+19293120932" class="text-lg font-bold text-amber-400 hover:text-amber-300 transition">+1 (929) 312-0932</a> | 
+                <span class="text-sm ml-2">Available 24/7 for Emergency Consultations.</span>
+            </div>
+            <p class="text-sm leading-relaxed mb-1">&copy; 2024 Master Shivaram Ji. All rights reserved. </p>
+            <p class="text-xs text-gray-500">Disclaimer: All readings and services are for spiritual and informational purposes only.</p>
+        </div>
+    </footer>
+
+    <!-- Script to ensure Lucide icons initialize and handle scroll animations -->
+    <script>
+        // Lucide Icons Initialization
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+
+        // Scroll Reveal Animation Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            });
+
+            document.querySelectorAll('.scroll-reveal').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
