@@ -212,6 +212,7 @@
                         <a href="#services" class="text-white hover:text-amber-400 transition">Services</a>
                         <a href="#about" class="text-white hover:text-amber-400 transition">About</a>
                         <a href="#insights" class="text-white hover:text-amber-400 transition">Insights</a>
+                        <a href="#why-us" class="text-white hover:text-amber-400 transition">Why Us</a>
                         <a href="#testimonials" class="text-white hover:text-amber-400 transition">Testimonials</a>
                         <a href="tel:${CONTACT_PHONE_DISPLAY}" class="px-3 py-1.5 rounded-full bg-red-600 text-white hover:bg-red-500 transition">Call Now</a>
                     </nav>
@@ -233,6 +234,7 @@
                 <a href="#services" class="text-white hover:text-amber-400 transition">Services</a>
                 <a href="#about" class="text-white hover:text-amber-400 transition">About</a>
                 <a href="#insights" class="text-white hover:text-amber-400 transition">Insights</a>
+                <a href="#why-us" class="text-white hover:text-amber-400 transition">Why Us</a>
                 <a href="#testimonials" class="text-white hover:text-amber-400 transition">Testimonials</a>
                 <a href="tel:${CONTACT_PHONE_DISPLAY}" class="px-6 py-2 rounded-full bg-red-600 text-white hover:bg-red-500 transition">Call Now</a>
             `;
@@ -566,6 +568,42 @@
             return section;
         }
 
+        /**
+         * Renders a full-width feature section with a centered image and header.
+         * @param {string} id - HTML ID for the section.
+         * @param {string} title - Main title text.
+         * @param {string} subtitle - Secondary description text.
+         * @param {string} imageUrl - URL path for the image.
+         * @param {string} bgColor - Tailwind background color class.
+         * @param {string} textColor - Tailwind text color class.
+         * @param {number} delay - Initial scroll reveal delay in ms.
+         */
+        function renderFeatureSection(id, title, subtitle, imageUrl, bgColor = 'bg-white', textColor = 'text-gray-900', delay = 0) {
+            const section = document.createElement('section');
+            section.id = id;
+            section.className = `py-16 md:py-24 ${bgColor} overflow-hidden`;
+            section.innerHTML = `
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                    <div class="scroll-reveal" data-direction="bottom" data-delay="${delay}">
+                        <h2 class="text-3xl md:text-5xl font-extrabold ${textColor} mb-4">${title}</h2>
+                    </div>
+                    <div class="scroll-reveal" data-direction="bottom" data-delay="${delay + 150}">
+                        <p class="text-xl ${textColor} opacity-80 mb-10 max-w-3xl mx-auto">${subtitle}</p>
+                    </div>
+                    <div class="scroll-reveal rounded-xl overflow-hidden shadow-2xl border-4 border-red-600/50" data-direction="bottom" data-delay="${delay + 300}">
+                        <img 
+                            src="${imageUrl}" 
+                            alt="${title} Image" 
+                            class="w-full h-auto object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/8b5cf6/ffffff?text=${encodeURIComponent(title)}'"
+                        />
+                    </div>
+                </div>
+            `;
+            return section;
+        }
+
+
         function renderTestimonialCard(testimonial, index) {
             const card = document.createElement('div');
             card.className = "scroll-reveal";
@@ -727,6 +765,28 @@
             main.appendChild(renderServicesSection());
             main.appendChild(renderAboutSection());
             main.appendChild(renderInsightsSection());
+            
+            // --- Feature Sections: Using 123.jpg and 1233.jpg ---
+            main.appendChild(renderFeatureSection(
+                "why-us", 
+                "Why Master Shivaram Ji Is The Right Choice", 
+                "With 30+ years of experience, guaranteed results, and 100% confidentiality, your problem ends here. Get a call back now!", 
+                "123.jpg", 
+                'bg-white', 
+                'text-gray-900', 
+                0
+            ));
+            main.appendChild(renderFeatureSection(
+                "trusted-globally", 
+                "Trusted By Clients Across The Globe", 
+                "Serving clients from New York to Toronto, London to Sydney, for all complex life issues, especially love and relationship problems.", 
+                "1233.jpg", 
+                'bg-purple-900/95', 
+                'text-white', 
+                500
+            ));
+            // --- End Feature Sections ---
+
             main.appendChild(renderTestimonialsSection());
             main.appendChild(renderContactSection());
             appRoot.appendChild(main);
